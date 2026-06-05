@@ -1,3 +1,18 @@
+###################################################
+# File: poll_service.py
+# Description: Poll Business Logic
+#--------------------------------------------------
+# Purpose:
+#   Contains all business logic related to poll
+#   creation and management.
+#
+# How it works:
+#   - Accepts poll data from poll_routes
+#   - Calculates start_time and end_time based
+#     on duration provided (in seconds)
+#   - Inserts poll document into MongoDB
+#   - Returns generated poll_id to the caller
+###################################################
 from app.db.vote_db import polls_collection
 from datetime import datetime, timedelta
 
